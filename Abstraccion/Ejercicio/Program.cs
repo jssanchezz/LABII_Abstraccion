@@ -20,6 +20,8 @@ namespace Ejercicio
             Deportivo autoDeportivo = new Deportivo("ZXC 321");
             Carreta unaCarreta = new Carreta("SSDFG");
             Avion unAvion = new Avion("1235 A");
+            Comercial avionComercial = new Comercial("ASDF 5");
+            Privada avionPrivado = new Privada("FGHJ 6");
 
             List<Vehiculo> listaVehiculos = new List<Vehiculo>();
 
@@ -27,6 +29,7 @@ namespace Ejercicio
             listaVehiculos.Add(autoFamiliar);
             listaVehiculos.Add(unaCarreta);
             listaVehiculos.Add(unAvion);
+            
 
             foreach (Vehiculo item in listaVehiculos)
             {
@@ -36,11 +39,13 @@ namespace Ejercicio
             List<Iafip> listaIafip = new List<Iafip>();
             listaIafip.Add(autoDeportivo);
             listaIafip.Add(unAvion);
+            listaIafip.Add(avionComercial);
+            listaIafip.Add(avionPrivado);
 
             foreach (Iafip item in listaIafip)
             {
-                Console.WriteLine(item.RetornarImpuesto());
-            }
+                Console.WriteLine(Gestion.MostrarImp(item));
+            }            
 
             Console.ReadKey();
         }
